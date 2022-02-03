@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  HEROKU_API_KEY: ${{secrets.HEROKU.API.KEY}}
-  IMAGE_NAME: registry.heroku.com/${{secrets.HEROKU_APP_NAME}}
+  HEROKU_API_KEY: ${{ secrets.HEROKU.API.KEY }}
+  IMAGE_NAME: registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}
 
 jobs:
   cd:
@@ -22,5 +22,5 @@ jobs:
       - name: Push Docker Image
         run: heroku container:push web --app js-heroku-front-demon
       - name: Release
-        run: heroku container:release web --app --app js-heroku-front-demon
+        run: heroku container:release web --app js-heroku-front-demon
    
