@@ -22,7 +22,8 @@ COPY ./server/index.js .
 
 RUN npm install --only=production
 
-CMD ["node", "index.js"]
 
 ENV PORT=8083
 EXPOSE 8083
+
+CMD ["node", "index.js"]
